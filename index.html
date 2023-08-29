@@ -8,10 +8,19 @@
     <body>
         <main>
             <div id="Q"></div>
-            <div><button id="buttonA">答え</button>
-            <p id="A" class="hidden"></p></div>
-            <div id="hint1">ヒント１</div>
-            <div id="hint2">ヒント２</div>
+            <div>
+                <button id="buttonA">答え</button>
+            <p id="A" class="hidden"></p>
+            </div>
+            <div>
+                <button id="type1">タイプ１</button>
+                <p id="T1" class="hidden"></p>
+            </div>
+            <div>
+                <button id="type2">タイプ２</button>
+                <p id="T2" class="hidden"></p>
+            </div>
+
             <table>
 
             </table>
@@ -368,16 +377,35 @@
 
                 }
 
-                    //答えの表示    
-
-                    let Clickbuttom=document.getElementById("A");
+                //答えの表示  
+                let Clickbuttom=document.getElementById("A");
                 Clickbuttom.innerHTML=result;
-
                 const buttonA = document.getElementById("buttonA");
-
                 buttonA.addEventListener('click', () => {
                 // ボタンクリックでhiddenクラスを付け外しする
                 Clickbuttom.classList.toggle('hidden');
+                });
+
+                                //タイプ１の表示
+                let type1click=document.getElementById("T1");
+                type1click.innerHTML=Ans[2];
+                const type1 = document.getElementById("type1");
+                type1.addEventListener('click', () => {
+                type1click.classList.toggle('hidden');
+                });
+
+                //タイプ２の表示
+                let type2click=document.getElementById("T2");
+
+                if(Ans[3]==""){                    
+                type2click.innerHTML="なし";
+                }
+                else{
+                type2click.innerHTML=Ans[3];
+                }
+                const type2 = document.getElementById("type2");
+                type2.addEventListener('click', () => {
+                type2click.classList.toggle('hidden');
                 });
 
 
