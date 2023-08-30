@@ -20,6 +20,9 @@
                 <button id="type2">タイプ２</button>
                 <p id="T2" class="hidden"></p>
             </div>
+            <div>
+                <input type="button" value="次の問題" onclick="window.location.reload();" />
+            </div>
 
             <table>
 
@@ -330,6 +333,18 @@
                         else if(num[j]==12489){//ど→ば
                             num[j]=12496;
                         }
+                        else if(num[j]==12509){//ぽ→ぺ
+                            num[j]=12506;
+                        }
+                        else if(num[j]==12508){//ぼ→べ
+                            num[j]=12505;
+                        }
+                        else if(num[j]==12457){//ぉ→ぇ
+                            num[j]=12455;
+                        }
+                        else if(num[j]==12519){//ょ→ゅ
+                            num[j]=12517;
+                        }
                         else{
                             num[j]+=2; 
                         }
@@ -362,7 +377,19 @@
                         }
                         else if(num[j]==12496){//ば→ど
                             num[j]=12489;
-                        } 
+                        }
+                        else if(num[j]==12497){//ぱ→ぴ
+                            num[j]=12500;
+                        }
+                        else if(num[j]==12460){//が→ぎ
+                            num[j]=12462;
+                        }
+                        else if(num[j]==12449){//ぁ→ぃ
+                            num[j]=12451;
+                        }
+                        else if(num[j]==12515){//ゃ→ゅ
+                            num[j]=12513;
+                        }
                         else{
                             num[j]-=2;
                         }
